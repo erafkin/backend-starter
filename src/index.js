@@ -3,8 +3,8 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
-import mongoose from 'mongoose';
-import router from './router';
+// import mongoose from 'mongoose';
+
 // initialize
 const app = express();
 
