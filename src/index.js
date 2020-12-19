@@ -14,6 +14,10 @@ app.use(cors());
 // enable/disable http request logging
 app.use(morgan('dev'));
 
+// enable json message body for posting data to API
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 dotenv.config(); // load environment variables
 
 /** UNCOMMENT IF YOU WANT TO HOOK UP MONGODB */
@@ -34,10 +38,6 @@ dotenv.config(); // load environment variables
 // mongoose.Promise = global.Promise;
 
 /** ************************************* */
-
-// enable json message body for posting data to API
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
 
 // default index route
 app.get('/', (req, res) => {
